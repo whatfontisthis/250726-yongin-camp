@@ -75,12 +75,88 @@ header {
   line-height: 1.5;
 }
 
+/* Tools section */
+.tools-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.tools-section h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.tool-card {
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.2s ease;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.tool-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.tool-card h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 8px;
+}
+
+.tool-card p {
+  color: #5f6368;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.tool-btn {
+  background: #4285f4;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+  display: inline-block;
+}
+
+.tool-btn:hover {
+  background: #3367d6;
+}
+
+/* Materials section */
+.materials-section {
+  margin-bottom: 48px;
+}
+
+.materials-section h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
 /* Sessions grid */
 .sessions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
-  margin-bottom: 48px;
 }
 
 .session-card {
@@ -216,6 +292,19 @@ footer {
     font-size: 1.8rem;
   }
 
+  .tools-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .materials-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .description {
     font-size: 1.1rem;
   }
@@ -238,6 +327,15 @@ footer {
 @media (max-width: 480px) {
   .logo h1 {
     font-size: 2.4rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tool-card {
+    padding: 20px;
   }
 
   .session-card {

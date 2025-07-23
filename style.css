@@ -56,8 +56,11 @@ body {
 }
 
 .nav-logo {
-  height: 28px;
+  height: 28px !important;
   width: auto;
+  max-height: 28px !important;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-fallback {
@@ -109,9 +112,12 @@ body {
 }
 
 .tool-icon img {
-  width: 16px;
-  height: 16px;
+  width: 16px !important;
+  height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
   object-fit: contain;
+  display: block;
 }
 
 .icon-fallback {
@@ -164,8 +170,10 @@ header {
   }
 
   .tool-icon img {
-    width: 18px;
-    height: 18px;
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
   }
 
   .icon-fallback {

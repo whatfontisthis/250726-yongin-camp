@@ -95,11 +95,11 @@ body {
 }
 
 .nav-tool:hover {
-  background: #e8f5e8;
-  border-color: #34a853;
-  color: #1e8e3e;
+  background: #e3f2fd;
+  border-color: #1976d2;
+  color: #1565c0;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(52, 168, 83, 0.2);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
 }
 
 .tool-icon {
@@ -186,7 +186,8 @@ header {
 
   .footer-content {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
+    padding: 0 16px;
   }
 
   .footer-contact {
@@ -211,8 +212,8 @@ header {
 .logo h1 {
   font-family: "NanumSquare", "Roboto", sans-serif;
   font-size: 3.2rem;
-  font-weight: 700;
-  color: #34a853;
+  font-weight: 1000;
+  color: #1a3691;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
 }
@@ -301,7 +302,7 @@ header {
 }
 
 .tool-btn {
-  background: #34a853;
+  background: #1976d2;
   color: white;
   padding: 12px 16px;
   border-radius: 4px;
@@ -313,7 +314,7 @@ header {
 }
 
 .tool-btn:hover {
-  background: #2d7d32;
+  background: #1565c0;
 }
 
 /* Materials section */
@@ -352,7 +353,7 @@ header {
 }
 
 .session-number {
-  background: #34a853;
+  background: #1976d2;
   color: white;
   padding: 6px 16px;
   border-radius: 16px;
@@ -375,34 +376,336 @@ header {
   font-size: 1rem;
 }
 
-.dataset-links {
+.session-buttons {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-top: 16px;
 }
 
 .dataset-btn {
-  background: #f8f9fa;
-  border: 1px solid #e8eaed;
-  border-radius: 4px;
-  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  padding: 14px 18px;
   text-decoration: none;
-  color: #3c4043;
-  font-weight: 400;
+  color: #202124;
+  font-weight: 500;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 0.95rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .dataset-btn:hover {
-  background: #e8f5e8;
-  border-color: #34a853;
-  color: #1e8e3e;
+  background: #e3f2fd;
+  border-color: #1976d2;
+  color: #1565c0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
 }
 
 .dataset-btn:active {
   background: #d2e3fc;
+  transform: translateY(0);
+}
+
+/* 슬라이드 버튼 특별 스타일 */
+.dataset-btn[href*="presentation"] {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  color: white;
+  font-weight: 600;
+  border-color: #1976d2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dataset-btn[href*="presentation"] .dataset-type {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 데이터셋 아이템 스타일 (1교시용) */
+.dataset-item-style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dataset-btn[href*="presentation"]:hover {
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.dataset-btn[href*="presentation"]:hover .dataset-type {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Disabled button style */
+.dataset-btn.disabled {
+  background: #f8f9fa !important;
+  color: #9aa0a6 !important;
+  border-color: #e8eaed !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.dataset-btn.disabled:hover {
+  background: #f8f9fa !important;
+  color: #9aa0a6 !important;
+  border-color: #e8eaed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* 데이터셋 토글 버튼 */
+.dataset-toggle {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  font-weight: 400 !important;
+}
+
+.dataset-toggle.active {
+  background: #e3f2fd !important;
+  border-color: #1976d2 !important;
+  color: #1565c0 !important;
+}
+
+/* 데이터셋 컨테이너 */
+.datasets-container {
+  margin-top: 12px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e8eaed;
+  animation: slideDown 0.3s ease-out;
+}
+
+.datasets-header {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.datasets-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.dataset-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background: white;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #202124;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.dataset-item:hover {
+  background: #e8f0fe;
+  border-color: #1976d2;
+  color: #1565c0;
+  transform: translateX(4px);
+}
+
+.dataset-icon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.dataset-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.dataset-type {
+  font-size: 0.8rem;
+  color: #5f6368;
+  background: #f1f3f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* 반별 그리드 */
+.classes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.class-group {
+  background: white;
+  border: 1px solid #e8eaed;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s ease;
+}
+
+.class-group:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.class-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.class-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.class-room {
+  font-size: 0.85rem;
+  color: #5f6368;
+  background: #f1f3f4;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.class-teams {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.team-btn-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  border: 1px solid #e65100;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 44px;
+  box-shadow: 0 2px 4px rgba(230, 81, 0, 0.2);
+}
+
+.team-btn-small:hover {
+  background: linear-gradient(135deg, #f7931e, #ff8f00);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(230, 81, 0, 0.3);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .datasets-container {
+    margin-top: 10px;
+    padding: 12px;
+  }
+
+  .dataset-item {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .dataset-icon {
+    margin-right: 8px;
+  }
+
+  .class-group {
+    padding: 12px;
+  }
+
+  .class-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .class-name {
+    font-size: 0.9rem;
+  }
+
+  .class-teams {
+    gap: 6px;
+  }
+
+  .team-btn-small {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    min-width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .class-group {
+    padding: 10px;
+  }
+
+  .class-name {
+    font-size: 0.85rem;
+  }
+
+  .class-room {
+    font-size: 0.8rem;
+  }
+
+  .team-btn-small {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+    min-width: 36px;
+  }
+}
+
+/* Small PPT Container (in cards) */
+.ppt-container {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e8eaed;
+  animation: slideDown 0.3s ease-out;
+}
+
+.ppt-placeholder {
+  text-align: center;
+  color: #5f6368;
+  font-style: italic;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 /* Help section */
@@ -451,36 +754,40 @@ header {
 
 /* Footer */
 footer {
-  margin-top: auto;
-  padding: 32px 0;
+  width: 100%;
+  padding: 16px 0;
   background: #f8f9fa;
   border-top: 1px solid #e8eaed;
+  margin-top: 40px;
 }
 
 .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
 }
 
 .footer-info,
 .footer-contact {
   flex: 1;
-  min-width: 200px;
+  min-width: 180px;
 }
 
 .footer-main {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: #34a853;
-  margin-bottom: 8px;
+  color: #1976d2;
+  margin-bottom: 4px;
 }
 
 .footer-orgs {
   color: #5f6368;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin-bottom: 0;
 }
 
@@ -489,13 +796,13 @@ footer {
 }
 
 .footer-developer {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #5f6368;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .footer-developer a {
-  color: #34a853;
+  color: #1976d2;
   text-decoration: none;
   font-weight: 400;
 }
@@ -505,7 +812,7 @@ footer {
 }
 
 .footer-copyright {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #9aa0a6;
   margin-bottom: 0;
 }
@@ -570,7 +877,17 @@ footer {
     padding: 20px;
   }
 
-  .dataset-links {
+  .session-buttons {
     gap: 10px;
   }
+}
+
+/* 확장된 세션 카드 (데이터셋/템플릿 열릴 때만) */
+.session-card.expanded {
+  box-shadow: 0 8px 32px 0 rgba(25, 118, 210, 0.15),
+    0 1.5px 8px 0 rgba(25, 118, 210, 0.08);
+  border-color: #1976d2;
+  z-index: 2;
+  background: #f5faff;
+  transition: box-shadow 0.3s, border-color 0.3s, background 0.3s;
 }

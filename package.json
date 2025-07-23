@@ -1,0 +1,36 @@
+{
+  "name": "0726_yongin-ai-camp",
+  "version": "1.0.0",
+  "description": "7/26 AI 환경영재캠프 진행을 위한 사이트 운영",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatfontisthis/250726-yongin-camp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/whatfontisthis/250726-yongin-camp/issues"
+  },
+  "homepage": "https://whatfontisthis.github.io/250726-yongin-camp/",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^11.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^5.0.0",
+    "gh-pages": "^6.0.0"
+  }
+}

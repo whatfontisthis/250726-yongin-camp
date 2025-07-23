@@ -6,11 +6,93 @@
     <title>인공지능 환경영재캠프</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Product+Sans:wght@400;500;700&display=swap"
+      href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- Fixed Top Navigation -->
+    <nav class="fixed-nav">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="🌱"
+            class="nav-logo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+          />
+          <span class="nav-fallback" style="display: none">🌱</span>
+          <span class="nav-title">AI 환경영재캠프</span>
+        </div>
+        <div class="nav-tools">
+          <a
+            href="https://chatgpt.com"
+            target="_blank"
+            class="nav-tool"
+            title="AI로 데이터 분석하고 질문하기"
+          >
+            <span class="tool-icon">
+              <img
+                src="assets/images/tools/OpenWebUI.png"
+                alt="ChatGPT"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="icon-fallback" style="display: none">🤖</span>
+            </span>
+            <span class="tool-name">챗GPT</span>
+          </a>
+          <a
+            href="https://sheets.google.com"
+            target="_blank"
+            class="nav-tool"
+            title="데이터 정리하고 계산하기"
+          >
+            <span class="tool-icon">
+              <img
+                src="assets/images/tools/google-sheets.png"
+                alt="구글 시트"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="icon-fallback" style="display: none">📊</span>
+            </span>
+            <span class="tool-name">구글 시트</span>
+          </a>
+          <a
+            href="https://orangedatamining.com"
+            target="_blank"
+            class="nav-tool"
+            title="데이터 시각화하고 분석하기"
+          >
+            <span class="tool-icon">
+              <img
+                src="assets/images/tools/orange3.jpg"
+                alt="오렌지3"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="icon-fallback" style="display: none">📈</span>
+            </span>
+            <span class="tool-name">오렌지3</span>
+          </a>
+          <a
+            href="https://canva.com"
+            target="_blank"
+            class="nav-tool"
+            title="발표자료 만들고 디자인하기"
+          >
+            <span class="tool-icon">
+              <img
+                src="assets/images/tools/canva.svg"
+                alt="캔바"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+              />
+              <span class="icon-fallback" style="display: none">🎨</span>
+            </span>
+            <span class="tool-name">캔바</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <header>
         <div class="logo">
@@ -19,10 +101,6 @@
       </header>
 
       <main>
-        <div class="welcome-section">
-          <h2>AI 데이터 분석 및 디자인 씽킹</h2>
-        </div>
-
         <div class="materials-section">
           <h2>수업 자료</h2>
           <div class="sessions-grid">
@@ -94,73 +172,22 @@
             </div>
           </div>
         </div>
-
-        <div class="tools-section">
-          <h2>사용할 툴</h2>
-          <div class="tools-grid">
-            <div class="tool-card">
-              <h3>ChatGPT-4o</h3>
-              <p>AI로 데이터 분석하고 질문하기</p>
-              <a href="https://chatgpt.com" target="_blank" class="tool-btn">
-                바로가기 →
-              </a>
-            </div>
-
-            <div class="tool-card">
-              <h3>구글 시트</h3>
-              <p>데이터 정리하고 계산하기</p>
-              <a
-                href="https://sheets.google.com"
-                target="_blank"
-                class="tool-btn"
-              >
-                바로가기 →
-              </a>
-            </div>
-
-            <div class="tool-card">
-              <h3>오렌지3</h3>
-              <p>데이터 시각화하고 분석하기</p>
-              <a
-                href="https://orangedatamining.com"
-                target="_blank"
-                class="tool-btn"
-              >
-                바로가기 →
-              </a>
-            </div>
-
-            <div class="tool-card">
-              <h3>캔바</h3>
-              <p>발표자료 만들고 디자인하기</p>
-              <a href="https://canva.com" target="_blank" class="tool-btn">
-                바로가기 →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="help-section">
-          <div class="help-card">
-            <h3>도움이 필요하세요?</h3>
-            <p>
-              궁금한 점이 있으면 손을 들어 선생님께 질문하거나,<br />
-              환경영재캠프를 위해 준비한 AI를 활용해 보세요.
-            </p>
-            <!-- <div class="tips">
-              <div class="tip">
-                💡 <strong>팁:</strong> 파일은 다운로드 폴더에 저장됩니다.
-              </div>
-            </div> -->
-          </div>
-        </div>
       </main>
 
       <footer>
-        <p>
-          단국대 | 용인교육지원청 | 공학도서관 <br />
-          woobin@microschool.kr
-        </p>
+        <div class="footer-content">
+          <div class="footer-info">
+            <p class="footer-main">2025 AI 환경영재캠프</p>
+            <p class="footer-orgs">단국대학교 | 용인교육지원청 | 공학도서관</p>
+          </div>
+          <div class="footer-contact">
+            <p class="footer-developer">
+              Developed by
+              <a href="mailto:woobin@microschool.kr">woobin@microschool.kr</a>
+            </p>
+            <p class="footer-copyright">&copy; 2025 All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   </body>

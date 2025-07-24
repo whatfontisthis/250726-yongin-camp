@@ -60,8 +60,8 @@ header {
 
 /* Partner logos section */
 .partner-logos-section {
-  margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
 }
 
 /* 롤링 배너 스타일 */
@@ -75,10 +75,9 @@ header {
 .partner-logos-rolling-inner {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
   width: max-content;
   animation: rolling-logos 40s linear infinite;
-  transition: gap 0.3s, transform 0.5s;
 }
 .partner-logos-rolling-outer:hover .partner-logos-rolling-inner {
   animation-play-state: paused;
@@ -102,12 +101,12 @@ header {
   transform: translateY(-2px);
 }
 .partner-logo-img {
-  height: 54px;
+  height: 60px;
   width: auto;
-  max-width: 110px;
+  max-width: 120px;
   object-fit: contain;
   filter: grayscale(20%) opacity(0.9);
-  transition: filter 0.2s, transform 0.2s;
+  transition: all 0.2s ease;
 }
 .partner-logo-img:hover {
   filter: grayscale(0%) opacity(1);
@@ -142,10 +141,6 @@ header {
   transition: all 0.2s ease;
   position: relative;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  min-width: 340px;
-  max-width: 380px;
-  width: 100%;
-  min-height: 420px;
 }
 
 .session-card:hover {
@@ -499,19 +494,6 @@ footer {
     gap: 20px;
   }
 
-  .sessions-grid-horizontal {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    justify-content: center;
-    margin-bottom: 32px;
-  }
-  .sessions-grid-single {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
   .datasets-container {
     margin-top: 10px;
     padding: 12px;
@@ -688,71 +670,4 @@ footer {
 }
 .session-blue .dataset-btn.google-yellow {
   box-shadow: 0 2px 8px rgba(66, 133, 244, 0.08);
-}
-
-.main-camp-title {
-  font-size: 3.2rem;
-  font-weight: 900;
-  color: #ea4335;
-  text-align: center;
-  margin-bottom: 0.7rem;
-  margin-top: 1.2rem;
-  letter-spacing: -0.02em;
-}
-.partner-logos-section {
-  margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
-}
-.partner-logos-rolling-inner {
-  gap: 1.5rem;
-  transition: gap 0.3s, transform 0.5s;
-}
-.partner-logo-img {
-  height: 54px;
-  max-width: 110px;
-  transition: filter 0.2s, transform 0.2s;
-}
-.main-program-title {
-  font-size: 2.1rem;
-  font-weight: 900;
-  color: #1976d2;
-  margin-bottom: 0.2rem;
-}
-.main-program-desc {
-  font-size: 1rem;
-  color: #888;
-  margin-bottom: 1.2rem;
-}
-.sessions-grid-horizontal {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-  justify-content: center;
-  margin-bottom: 32px;
-}
-.sessions-grid-single {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.session-card {
-  min-width: 340px;
-  max-width: 380px;
-  width: 100%;
-  min-height: 420px;
-}
-.session-time {
-  font-size: 1.05rem;
-  color: #666;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  text-align: left;
-  letter-spacing: 0.01em;
-}
-.session-time-inline {
-  font-size: 0.97rem;
-  color: #aaa;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin-left: 0.1rem;
 }

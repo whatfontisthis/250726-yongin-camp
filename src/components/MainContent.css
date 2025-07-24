@@ -626,3 +626,48 @@ footer {
   font-size: 1rem;
   margin: 0;
 }
+
+.session-green {
+  border: 1.5px solid #43a047 !important;
+  background: #e8f5e9 !important;
+}
+.session-green .session-number {
+  background: #43a047 !important;
+  color: #fff !important;
+}
+.session-green h3,
+.session-green p {
+  color: #388e3c !important;
+}
+.session-green .dataset-btn {
+  background: linear-gradient(135deg, #43a047, #66bb6a) !important;
+  color: #fff !important;
+  border-color: #43a047 !important;
+}
+
+.google-yellow {
+  background: linear-gradient(135deg, #fbbc04, #ffe082) !important;
+  color: #202124 !important;
+  border-color: #fbbc04 !important;
+  font-weight: 700;
+}
+.google-yellow:hover {
+  background: linear-gradient(135deg, #ffe082, #fbbc04) !important;
+  color: #202124 !important;
+}
+
+.session-blue {
+  border: 1.5px solid #4285f4 !important;
+  background: #e3f2fd !important;
+}
+.session-blue .session-number {
+  background: #4285f4 !important;
+  color: #fff !important;
+}
+.session-blue h3,
+.session-blue p {
+  color: #1565c0 !important;
+}
+.session-blue .dataset-btn.google-yellow {
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.08);
+}

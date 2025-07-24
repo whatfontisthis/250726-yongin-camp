@@ -34,7 +34,7 @@ export default function MainContent({ onBackClick }) {
            transition={{ delay: 0.2 }}
          >
            <div className="logo">
-             <h1>2025 인공지능 환경영재캠프</h1>
+             <h1 style={{ color: '#EA4335' }}>2025 인공지능 환경영재캠프</h1>
            </div>
            
            <motion.div 
@@ -107,11 +107,11 @@ export default function MainContent({ onBackClick }) {
             >
               {/* 1교시 */}
               <motion.div
-                className={`session-card${openDatasets.session1 ? ' expanded' : ''}`}
+                className={`session-card session-blue${openDatasets.session1 ? ' expanded' : ''}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                <div className="session-number">1교시</div>
+                <div className="session-number" style={{ background: '#4285F4' }}>1교시</div>
                 <h3>데이터 분석과 시각화</h3>
                 <p>구글 시트 및 오렌지3 활용</p>
 
@@ -122,7 +122,7 @@ export default function MainContent({ onBackClick }) {
                     rel="noopener noreferrer"
                     className="dataset-btn"
                   >
-                    <span className="dataset-name">1교시 슬라이드</span>
+                    <span className="dataset-name">1교시 교육자료</span>
                     <span className="dataset-type">.ppt</span>
                   </a>
                   <button
@@ -169,12 +169,12 @@ export default function MainContent({ onBackClick }) {
 
               {/* 2교시 */}
               <motion.div
-                className={`session-card ${openDatasets.session2 ? 'expanded' : ''}`}
+                className={`session-card session-blue${openDatasets.session2 ? ' expanded' : ''}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
-                <div className="session-number">2교시</div>
+                <div className="session-number" style={{ background: '#4285F4' }}>2교시</div>
                 <h3>디자인 씽킹</h3>
                 <p>환경 문제 해결을 위한 디자인 씽킹</p>
                 <div className="session-buttons">
@@ -184,7 +184,7 @@ export default function MainContent({ onBackClick }) {
                     rel="noopener noreferrer"
                     className="dataset-btn"
                   >
-                    <span className="dataset-name">2교시 슬라이드</span>
+                    <span className="dataset-name">2교시 교육자료</span>
                     <span className="dataset-type">.ppt</span>
                   </a>
                   <button
@@ -236,12 +236,12 @@ export default function MainContent({ onBackClick }) {
 
               {/* 3교시 */}
               <motion.div
-                className={`session-card ${openDatasets.session3 ? 'expanded' : ''}`}
+                className={`session-card session-blue${openDatasets.session3 ? ' expanded' : ''}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <div className="session-number">3교시</div>
+                <div className="session-number" style={{ background: '#4285F4' }}>3교시</div>
                 <h3>발표</h3>
                 <p>Canva를 활용한 팀 발표</p>
                 <div className="session-buttons">
@@ -251,7 +251,7 @@ export default function MainContent({ onBackClick }) {
                     rel="noopener noreferrer"
                     className="dataset-btn"
                   >
-                    <span className="dataset-name">3교시 슬라이드</span>
+                    <span className="dataset-name">3교시 교육자료</span>
                     <span className="dataset-type">.ppt</span>
                   </a>
                   <button
@@ -294,6 +294,29 @@ export default function MainContent({ onBackClick }) {
                       </div>
                     </motion.div>
                   )}
+                </div>
+              </motion.div>
+              {/* 4교시 */}
+              <motion.div
+                className="session-card session-green"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <div className="session-number" style={{ background: '#43a047' }}>4교시</div>
+                <h3 style={{ color: '#388e3c' }}>청청 프로젝트</h3>
+                <p style={{ color: '#388e3c' }}>환경을 위한 실천 프로젝트</p>
+                <div className="session-buttons">
+                  <a
+                    href="https://docs.google.com/presentation/d/1drHbK9Sii0YBL4x5ZvwGPuHzZX1VtePz/preview"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="dataset-btn"
+                    style={{ background: 'linear-gradient(135deg, #43a047, #66bb6a)', color: 'white', borderColor: '#43a047' }}
+                  >
+                    <span className="dataset-name">4교시 교육자료</span>
+                    <span className="dataset-type">.ppt</span>
+                  </a>
                 </div>
               </motion.div>
             </motion.div>

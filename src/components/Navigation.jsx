@@ -6,7 +6,7 @@ export default function Navigation() {
       <div className="nav-container">
         <div className="nav-brand">
                      <img
-             src="/250726-yongin-camp/assets/images/logo.png"
+             src="assets/images/logo.png"
              alt="🌱"
              className="nav-logo"
              onError={(e) => {
@@ -27,7 +27,7 @@ export default function Navigation() {
           >
             <span className="tool-icon">
                              <img
-                 src="/250726-yongin-camp/assets/images/tools/OpenWebUI.png"
+                 src="assets/images/tools/OpenWebUI.png"
                  alt="ChatGPT"
                  onError={(e) => {
                    e.target.style.display = 'none'
@@ -47,7 +47,7 @@ export default function Navigation() {
           >
             <span className="tool-icon">
                              <img
-                 src="/250726-yongin-camp/assets/images/tools/google-sheets.png"
+                 src="assets/images/tools/google-sheets.png"
                  alt="구글 시트"
                  onError={(e) => {
                    e.target.style.display = 'none'
@@ -67,7 +67,7 @@ export default function Navigation() {
           >
             <span className="tool-icon">
                              <img
-                 src="/250726-yongin-camp/assets/images/tools/orange3.jpg"
+                 src="assets/images/tools/orange3.jpg"
                  alt="오렌지3"
                  onError={(e) => {
                    e.target.style.display = 'none'
@@ -87,7 +87,7 @@ export default function Navigation() {
           >
             <span className="tool-icon">
                              <img
-                 src="/250726-yongin-camp/assets/images/tools/canva.svg"
+                 src="assets/images/tools/canva.svg"
                  alt="캔바"
                  onError={(e) => {
                    e.target.style.display = 'none'

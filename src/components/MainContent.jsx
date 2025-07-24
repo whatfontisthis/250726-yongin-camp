@@ -43,47 +43,60 @@ export default function MainContent({ onBackClick }) {
              animate={{ opacity: 1, y: 0 }}
              transition={{ delay: 0.4 }}
            >
-             <div className="partner-logos-container">
-               <div className="partner-logo-item">
-                 <img 
-                   src="/250726-yongin-camp/assets/logos/단국대.jpg" 
-                   alt="단국대학교" 
-                   className="partner-logo-img"
-                   onError={(e) => {
-                     e.target.style.display = 'none'
-                     e.target.nextElementSibling.style.display = 'block'
-                   }}
-                 />
-                 <span className="partner-logo-fallback">단국대학교</span>
-               </div>
-               <div className="partner-logo-item">
-                 <img 
-                   src="/250726-yongin-camp/assets/logos/용인교육지원청.jpg" 
-                   alt="용인교육지원청" 
-                   className="partner-logo-img"
-                   onError={(e) => {
-                     e.target.style.display = 'none'
-                     e.target.nextElementSibling.style.display = 'block'
-                   }}
-                 />
-                 <span className="partner-logo-fallback">용인교육지원청</span>
-               </div>
-               <div className="partner-logo-item">
-                 <img 
-                   src="/250726-yongin-camp/assets/logos/공학도서관.webp" 
-                   alt="공학도서관" 
-                   className="partner-logo-img"
-                   onError={(e) => {
-                     e.target.style.display = 'none'
-                     e.target.nextElementSibling.style.display = 'block'
-                   }}
-                 />
-                 <span className="partner-logo-fallback">공학도서관</span>
+             <div className="partner-logos-rolling-outer">
+               <div className="partner-logos-rolling-inner">
+                 {[
+                   { src: 'assets/logos/로고 단국대 교육연구소.png', alt: '단국대 교육연구소' },
+                   { src: 'assets/logos/로고 단국대.png', alt: '단국대' },
+                   { src: 'assets/logos/로고 용인시.jpg', alt: '용인시' },
+                   { src: 'assets/logos/로고 용인자원봉사센터.png', alt: '용인자원봉사센터' },
+                   { src: 'assets/logos/로고 용인지원청.gif', alt: '용인지원청' },
+                   { src: 'assets/logos/공학도서관.webp', alt: '공학도서관' },
+                 ].map((logo, idx) => (
+                   <div className="partner-logo-item" key={logo.src + idx}>
+                     <img
+                       src={logo.src}
+                       alt={logo.alt}
+                       className="partner-logo-img"
+                       onError={e => {
+                         e.target.style.display = 'none';
+                         e.target.nextElementSibling.style.display = 'block';
+                       }}
+                     />
+                     <span className="partner-logo-fallback" style={{ display: 'none' }}>{logo.alt}</span>
+                   </div>
+                 ))}
+                 {/* 무한 롤링을 위해 한 번 더 반복 */}
+                 {[
+                   { src: 'assets/logos/로고 단국대 교육연구소.png', alt: '단국대 교육연구소' },
+                   { src: 'assets/logos/로고 단국대.png', alt: '단국대' },
+                   { src: 'assets/logos/로고 용인시.jpg', alt: '용인시' },
+                   { src: 'assets/logos/로고 용인자원봉사센터.png', alt: '용인자원봉사센터' },
+                   { src: 'assets/logos/로고 용인지원청.gif', alt: '용인지원청' },
+                   { src: 'assets/logos/공학도서관.webp', alt: '공학도서관' },
+                 ].map((logo, idx) => (
+                   <div className="partner-logo-item" key={logo.src + '2' + idx}>
+                     <img
+                       src={logo.src}
+                       alt={logo.alt}
+                       className="partner-logo-img"
+                       onError={e => {
+                         e.target.style.display = 'none';
+                         e.target.nextElementSibling.style.display = 'block';
+                       }}
+                     />
+                     <span className="partner-logo-fallback" style={{ display: 'none' }}>{logo.alt}</span>
+                   </div>
+                 ))}
                </div>
              </div>
            </motion.div>
-         </motion.header>
-
+        </motion.header>
+        <hr className="section-divider" />
+        <div className="section-title">
+          <h2>오늘의 프로그램</h2>
+          <p>아래 필요한 교육 슬라이드와 실습 파일을 확인하세요.</p>
+        </div>
         <main>
           <div className="materials-section">
             <motion.div
@@ -94,7 +107,7 @@ export default function MainContent({ onBackClick }) {
             >
               {/* 1교시 */}
               <motion.div
-                className="session-card"
+                className={`session-card${openDatasets.session1 ? ' expanded' : ''}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
               >
@@ -112,15 +125,45 @@ export default function MainContent({ onBackClick }) {
                     <span className="dataset-name">1교시 슬라이드</span>
                     <span className="dataset-type">.ppt</span>
                   </a>
-                  <a
-                    href="https://drive.google.com/uc?export=download&id=1RNGK9nsiiO5RSVE_dkeh0hXFMPnLoG6X"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="dataset-btn dataset-item-style"
+                  <button
+                    className={`dataset-btn dataset-toggle ${openDatasets.session1 ? 'active' : ''}`}
+                    onClick={() => toggleDatasets('session1')}
                   >
-                    <span className="dataset-name">1교시 데이터셋</span>
-                    <span className="dataset-type">.csv</span>
-                  </a>
+                    데이터셋 {openDatasets.session1 ? '▲' : '▼'}
+                  </button>
+                  {openDatasets.session1 && (
+                    <motion.div
+                      className="datasets-container"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                    >
+                      <div className="datasets-header">실습용 데이터셋</div>
+                      <div className="datasets-grid">
+                        <a href="https://drive.google.com/uc?export=download&id=1RNGK9nsiiO5RSVE_dkeh0hXFMPnLoG6X" className="dataset-item" target="_blank" rel="noopener noreferrer">
+                          <span className="dataset-icon">📊</span>
+                          <span className="dataset-name">구글시트-1교시 데이터셋</span>
+                          <span className="dataset-type">.csv</span>
+                        </a>
+                        <a href="https://drive.google.com/uc?export=download&id=1Xxu5JCi78P4vzECZO4ocRK6bwN59MMW4" className="dataset-item" target="_blank" rel="noopener noreferrer">
+                          <span className="dataset-icon">🍕</span>
+                          <span className="dataset-name">오렌지3-야식 선호도</span>
+                          <span className="dataset-type">.csv</span>
+                        </a>
+                        <a href="https://drive.google.com/uc?export=download&id=1SHkPV4OHFe5R-5xL4lT1FYYXt99R73F9" className="dataset-item" target="_blank" rel="noopener noreferrer">
+                          <span className="dataset-icon">🍦</span>
+                          <span className="dataset-name">오렌지3-온도와 아이스크림</span>
+                          <span className="dataset-type">.csv</span>
+                        </a>
+                        <a href="https://drive.google.com/uc?export=download&id=1Rql50vcfEGrMJTAq9fSmGgfecOd580dL" className="dataset-item" target="_blank" rel="noopener noreferrer">
+                          <span className="dataset-icon">🌡️</span>
+                          <span className="dataset-name">오렌지3-온습도 데이터</span>
+                          <span className="dataset-type">.csv</span>
+                        </a>
+                      </div>
+                    </motion.div>
+                  )}
+                  
                 </div>
               </motion.div>
 

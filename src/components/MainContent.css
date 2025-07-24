@@ -61,17 +61,35 @@ header {
 /* Partner logos section */
 .partner-logos-section {
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
-.partner-logos-container {
+/* 롤링 배너 스타일 */
+.partner-logos-rolling-outer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.partner-logos-rolling-inner {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 3rem;
-  flex-wrap: wrap;
+  width: max-content;
+  animation: rolling-logos 40s linear infinite;
 }
-
+.partner-logos-rolling-outer:hover .partner-logos-rolling-inner {
+  animation-play-state: paused;
+}
+@keyframes rolling-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .partner-logo-item {
   display: flex;
   flex-direction: column;
@@ -79,11 +97,9 @@ header {
   gap: 0.5rem;
   transition: transform 0.2s ease;
 }
-
 .partner-logo-item:hover {
   transform: translateY(-2px);
 }
-
 .partner-logo-img {
   height: 60px;
   width: auto;
@@ -92,7 +108,6 @@ header {
   filter: grayscale(20%) opacity(0.9);
   transition: all 0.2s ease;
 }
-
 .partner-logo-img:hover {
   filter: grayscale(0%) opacity(1);
   transform: scale(1.05);
@@ -585,4 +600,29 @@ footer {
     height: 40px;
     max-width: 80px;
   }
+}
+
+.section-divider {
+  border: none;
+  border-top: 2px solid #e3e8f0;
+  margin: 0px 0 24px 0;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.section-title h2 {
+  font-size: 1.6rem;
+  color: #1976d2;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+.section-title p {
+  color: #5f6368;
+  font-size: 1rem;
+  margin: 0;
 }

@@ -5,16 +5,10 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: linear-gradient(
-    180deg,
-    #6040b0 0%,
-    #6040b0 80%,
-    rgba(96, 64, 176, 0.8) 95%,
-    rgba(96, 64, 176, 0.4) 100%
-  );
+  background: #2563eb;
   backdrop-filter: blur(10px);
   border-bottom: none;
-  box-shadow: 0 4px 20px rgba(96, 64, 176, 0.3);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15);
 }
 
 .nav-container {
@@ -63,23 +57,24 @@
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  background: white;
-  border: 1px solid #dadce0;
+  background: transparent;
+  border: 1px solid #4285f4;
   border-radius: 16px;
   text-decoration: none;
-  color: #202124;
+  color: #ffffff;
   font-weight: 400;
   font-size: 0.85rem;
   transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(66, 133, 244, 0.08);
 }
 
-.nav-tool:hover {
-  background: #7050c0;
-  border-color: #6040b0;
-  color: #ffffff;
+.nav-tool:hover,
+.nav-tool:focus {
+  background: #fbbc05;
+  border-color: #fbbc05;
+  color: #4285f4;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(96, 64, 176, 0.3);
+  box-shadow: 0 2px 8px rgba(251, 188, 5, 0.15);
 }
 
 .tool-icon {

@@ -271,11 +271,57 @@ export default function MainContent({ onBackClick }) {
                       <div className="datasets-header">팀별 Canva 발표 템플릿</div>
                       <div className="classes-grid">
                         {[
-                          { name: '초3,4학년 A반', room: '402호', teams: ['1팀', '2팀', '3팀', '4팀'] },
-                          { name: '초3,4학년 B반', room: '403호', teams: ['5팀', '6팀', '7팀', '8팀'] },
-                          { name: '초5,6학년 A반', room: '404호', teams: ['9팀', '10팀', '11팀', '12팀'] },
-                          { name: '초5,6학년 B반', room: '405호', teams: ['13팀', '14팀', '15팀', '16팀'] },
-                          { name: '중1,2학년 A반', room: '406호', teams: ['17팀', '18팀', '19팀', '20팀', '21팀'] },
+                          { 
+                            name: '초3,4학년 A반', 
+                            room: '402호', 
+                            teams: [
+                              { name: '1팀', link: 'https://www.canva.com/design/DAGuD1xXucU/3oUyybv8BPsjxJf4sYdGUg/edit' },
+                              { name: '2팀', link: 'https://www.canva.com/design/DAGuDy4AV9s/qXgE8JAbSJWPC5J9F67iyg/edit' },
+                              { name: '3팀', link: 'https://www.canva.com/design/DAGuD25H1g0/UIslwxt127W5JYTDpvD6RA/edit' },
+                              { name: '4팀', link: 'https://www.canva.com/design/DAGuD4QgyjQ/2rboyfAj-dyNB6SJMmQM3g/edit' }
+                            ]
+                          },
+                          { 
+                            name: '초3,4학년 B반', 
+                            room: '403호', 
+                            teams: [
+                              { name: '5팀', link: 'https://www.canva.com/design/DAGuDy-Ylxs/_BU0SNNs-xBziqQ22JobfQ/edit' },
+                              { name: '6팀', link: 'https://www.canva.com/design/DAGuD1_MDFw/--H7C7zbn6QuWr4LkPtWGw/edit' },
+                              { name: '7팀', link: 'https://www.canva.com/design/DAGuEIQcqaI/Zg8uVML-gp0DMv1P_9r8eQ/edit' },
+                              { name: '8팀', link: 'https://www.canva.com/design/DAGuEOJ2Iv0/BwUXg_gJQ0qThjI8l8nx-g/edit' }
+                            ]
+                          },
+                          { 
+                            name: '초5,6학년 A반', 
+                            room: '404호', 
+                            teams: [
+                              { name: '9팀', link: 'https://www.canva.com/design/DAGuEOybAT4/U07Lybw3Qv5t3FYhb95X9g/edit' },
+                              { name: '10팀', link: 'https://www.canva.com/design/DAGuELxqf2M/ZRaU09mCld9wOL6wK_cshQ/edit' },
+                              { name: '11팀', link: 'https://www.canva.com/design/DAGuDz-3BgQ/2gTCBUNZwhX6lxd1fV7VcQ/edit' },
+                              { name: '12팀', link: 'https://www.canva.com/design/DAGuEDVXAYQ/xLWhTbLmqQOeUa-61_b0Pw/edit' }
+                            ]
+                          },
+                          { 
+                            name: '초5,6학년 B반', 
+                            room: '405호', 
+                            teams: [
+                              { name: '13팀', link: 'https://www.canva.com/design/DAGuEHSSKvI/UxsHKrKPCpPBcQuibUN4gg/edit' },
+                              { name: '14팀', link: 'https://www.canva.com/design/DAGuEL2Oup0/_57gaqUglkvwAD4SAVHYWQ/edit' },
+                              { name: '15팀', link: 'https://www.canva.com/design/DAGuEMLH4kM/qgIWnu6mumUlQ4yTVd8kGA/edit' },
+                              { name: '16팀', link: 'https://www.canva.com/design/DAGuEHPDTag/EHkVUMx_l3AbmvhAvAjP5g/edit' }
+                            ]
+                          },
+                          { 
+                            name: '중1,2학년 A반', 
+                            room: '406호', 
+                            teams: [
+                              { name: '17팀', link: 'https://www.canva.com/design/DAGuEC6yRIw/sk95F5QRrNJVU3Xye6Grqw/edit' },
+                              { name: '18팀', link: 'https://www.canva.com/design/DAGuEKoE5ag/R36mkMGpew5uNClQYfGxlQ/edit' },
+                              { name: '19팀', link: 'https://www.canva.com/design/DAGuEEihxSw/NO9mdiRyUDa_akcUcA6lbg/edit' },
+                              { name: '20팀', link: 'https://www.canva.com/design/DAGuEFyr7YE/wT08XUcD5cCo7IOawdUReQ/edit' },
+                              { name: '21팀', link: 'https://www.canva.com/design/DAGuEFwH8UM/xrJox_QtDCA7PVz2Xe8rVQ/edit' }
+                            ]
+                          },
                         ].map((classGroup, index) => (
                           <div key={index} className="class-group">
                             <div className="class-header">
@@ -284,8 +330,8 @@ export default function MainContent({ onBackClick }) {
                             </div>
                             <div className="class-teams">
                               {classGroup.teams.map((team, teamIndex) => (
-                                <a key={teamIndex} href="#" className="team-btn-small" target="_blank" rel="noopener noreferrer">
-                                  {team}
+                                <a key={teamIndex} href={team.link} className="team-btn-small" target="_blank" rel="noopener noreferrer">
+                                  {team.name}
                                 </a>
                               ))}
                             </div>

@@ -5,10 +5,16 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(
+    180deg,
+    #6040b0 0%,
+    #6040b0 80%,
+    rgba(96, 64, 176, 0.8) 95%,
+    rgba(96, 64, 176, 0.4) 100%
+  );
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #e8eaed;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+  box-shadow: 0 4px 20px rgba(96, 64, 176, 0.3);
 }
 
 .nav-container {
@@ -26,7 +32,7 @@
   align-items: center;
   gap: 8px;
   font-weight: 700;
-  color: #202124;
+  color: #ffffff;
 }
 
 .nav-logo {
@@ -69,11 +75,11 @@
 }
 
 .nav-tool:hover {
-  background: #e3f2fd;
-  border-color: #1976d2;
-  color: #1565c0;
+  background: #7050c0;
+  border-color: #6040b0;
+  color: #ffffff;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+  box-shadow: 0 2px 8px rgba(96, 64, 176, 0.3);
 }
 
 .tool-icon {

@@ -15,7 +15,7 @@ export default function Navigation() {
              }}
            />
           <span className="nav-fallback" style={{display: 'none'}}>🌱</span>
-          <span className="nav-title">AI 환경영재캠프</span>
+                     <span className="nav-title" style={{ fontWeight: '900', color: '#ffffff', fontSize: '1.6rem' }}>공학도서관</span>
         </div>
         <div className="nav-tools">
           <a

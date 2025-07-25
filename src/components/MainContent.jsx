@@ -34,7 +34,7 @@ export default function MainContent({ onBackClick }) {
            transition={{ delay: 0.2 }}
          >
            <div className="logo">
-             <h1 style={{ color: '#EA4335' }}>2025 인공지능 환경영재캠프</h1>
+             <h1 style={{ color: '#0263e0' }}>인공지능 환경영재캠프</h1>
            </div>
            
            <motion.div 
@@ -95,7 +95,7 @@ export default function MainContent({ onBackClick }) {
         <hr className="section-divider" />
         <div className="section-title">
           <h2>오늘의 프로그램</h2>
-          <p>아래 필요한 교육 슬라이드와 실습 파일을 확인하세요.</p>
+          <p>아래 필요한 교육 자료와 실습 파일을 확인하세요.</p>
         </div>
         <main>
           <div className="materials-section">
@@ -111,7 +111,10 @@ export default function MainContent({ onBackClick }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                <div className="session-number" style={{ background: '#4285F4' }}>1교시</div>
+                                                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                   <div className="session-number" style={{ background: '#4285F4' }}>1교시</div>
+                   <span style={{ color: '#9aa0a6', fontSize: '1rem', fontWeight: '400' }}>09:10-10:00(50분)</span>
+                 </div>
                 <h3>데이터 분석과 시각화</h3>
                 <p>구글 시트 및 오렌지3 활용</p>
 
@@ -138,7 +141,7 @@ export default function MainContent({ onBackClick }) {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                     >
-                      <div className="datasets-header">실습용 데이터셋</div>
+                      <div className="datasets-header">실습용 데이터셋 다운로드 링크</div>
                       <div className="datasets-grid">
                         <a href="https://drive.google.com/uc?export=download&id=1RNGK9nsiiO5RSVE_dkeh0hXFMPnLoG6X" className="dataset-item" target="_blank" rel="noopener noreferrer">
                           <span className="dataset-icon">📊</span>
@@ -174,7 +177,10 @@ export default function MainContent({ onBackClick }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
-                <div className="session-number" style={{ background: '#4285F4' }}>2교시</div>
+                                                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                   <div className="session-number" style={{ background: '#4285F4' }}>2교시</div>
+                   <span style={{ color: '#9aa0a6', fontSize: '1rem', fontWeight: '400' }}>10:10-11:30(80분)</span>
+                 </div>
                 <h3>디자인 씽킹</h3>
                 <p>환경 문제 해결을 위한 디자인 씽킹</p>
                 <div className="session-buttons">
@@ -201,29 +207,29 @@ export default function MainContent({ onBackClick }) {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                     >
-                      <div className="datasets-header">환경 데이터 모음</div>
+                      <div className="datasets-header">환경 데이터 다운로드 링크</div>
                       <div className="datasets-grid">
-                        <a href="#" className="dataset-item">
+                        <a href="https://drive.google.com/uc?export=download&id=1L2wyu7-QE3_Bzcc6fEAD10-5gUNqd40O" className="dataset-item" target="_blank" rel="noopener noreferrer">
                           <span className="dataset-icon">🌫️</span>
                           <span className="dataset-name">대기오염 데이터</span>
                           <span className="dataset-type">.csv</span>
                         </a>
-                        <a href="#" className="dataset-item">
+                        <a href="https://drive.google.com/uc?export=download&id=1S9ozY1s7nX11JN4HWN4_enKamfusDgE_" className="dataset-item" target="_blank" rel="noopener noreferrer">
                           <span className="dataset-icon">💧</span>
                           <span className="dataset-name">물 오염 데이터</span>
                           <span className="dataset-type">.csv</span>
                         </a>
-                        <a href="#" className="dataset-item">
+                        <a href="https://drive.google.com/uc?export=download&id=1KbLLd6lZ9k3VGfSOtBJQ8eqgZcG-IA1r" className="dataset-item" target="_blank" rel="noopener noreferrer">
                           <span className="dataset-icon">🌱</span>
                           <span className="dataset-name">토양오염 데이터</span>
                           <span className="dataset-type">.csv</span>
                         </a>
-                        <a href="#" className="dataset-item">
+                        <a href="https://drive.google.com/uc?export=download&id=1O59-ZrToKQaSxr2mwEXbqt1AOrkaQNEw" className="dataset-item" target="_blank" rel="noopener noreferrer">
                           <span className="dataset-icon">🌡️</span>
                           <span className="dataset-name">기후변화 데이터</span>
                           <span className="dataset-type">.csv</span>
                         </a>
-                        <a href="#" className="dataset-item">
+                        <a href="https://drive.google.com/uc?export=download&id=1KPYZZbZeF6nNEU4SSUs7jzNqeUQ1J8dh" className="dataset-item" target="_blank" rel="noopener noreferrer">
                           <span className="dataset-icon">🦋</span>
                           <span className="dataset-name">생태계 데이터</span>
                           <span className="dataset-type">.csv</span>
@@ -241,7 +247,10 @@ export default function MainContent({ onBackClick }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <div className="session-number" style={{ background: '#4285F4' }}>3교시</div>
+                                                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                   <div className="session-number" style={{ background: '#4285F4' }}>3교시</div>
+                   <span style={{ color: '#9aa0a6', fontSize: '1rem', fontWeight: '400' }}>11:40-12:30(50분)</span>
+                 </div>
                 <h3>발표</h3>
                 <p>Canva를 활용한 팀 발표</p>
                 <div className="session-buttons">
@@ -349,7 +358,10 @@ export default function MainContent({ onBackClick }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <div className="session-number" style={{ background: '#43a047' }}>4교시</div>
+                                                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                   <div className="session-number" style={{ background: '#43a047' }}>4교시</div>
+                   <span style={{ color: '#9aa0a6', fontSize: '1rem', fontWeight: '400' }}>12:30-12:55(25분)</span>
+                 </div>
                 <h3 style={{ color: '#388e3c' }}>청청 프로젝트</h3>
                 <p style={{ color: '#388e3c' }}>환경을 위한 실천 프로젝트</p>
                 <div className="session-buttons">

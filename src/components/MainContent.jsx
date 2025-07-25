@@ -148,12 +148,12 @@ export default function MainContent({ onBackClick }) {
                           <span className="dataset-name">구글시트-1교시 데이터셋</span>
                           <span className="dataset-type">.csv</span>
                         </a>
-                        <a href="https://drive.google.com/uc?export=download&id=1Xxu5JCi78P4vzECZO4ocRK6bwN59MMW4" className="dataset-item" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/uc?export=download&id=12QsI_0KB-yg3jXiezL0Q9K0zqjVDvgqO" className="dataset-item" target="_blank" rel="noopener noreferrer">
                           <span className="dataset-icon">🍕</span>
                           <span className="dataset-name">오렌지3-야식 선호도</span>
                           <span className="dataset-type">.csv</span>
                         </a>
-                        <a href="https://drive.google.com/uc?export=download&id=1SHkPV4OHFe5R-5xL4lT1FYYXt99R73F9" className="dataset-item" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/uc?export=download&id=1sOZSFuv9FK6JjGQ1v4Btzkys4BGX0kG-" className="dataset-item" target="_blank" rel="noopener noreferrer">
                           <span className="dataset-icon">🍦</span>
                           <span className="dataset-name">오렌지3-온도와 아이스크림</span>
                           <span className="dataset-type">.csv</span>

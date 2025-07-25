@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/250726-yongin-camp/",
+  base: "/", // Changed for custom domain
   build: {
     outDir: "dist",
   },

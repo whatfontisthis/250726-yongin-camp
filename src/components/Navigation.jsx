@@ -59,7 +59,7 @@ export default function Navigation() {
             <span className="tool-name">구글 시트</span>
           </a>
           <a
-            href="https://orangedatamining.com"
+            href="https://drive.google.com/uc?export=download&id=1PnKpqIZGUt5ryzeb6KB3X5kW7hMQn03U"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-tool"

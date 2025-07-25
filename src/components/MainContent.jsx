@@ -158,7 +158,7 @@ export default function MainContent({ onBackClick }) {
                           <span className="dataset-name">오렌지3-온도와 아이스크림</span>
                           <span className="dataset-type">.csv</span>
                         </a>
-                        <a href="https://drive.google.com/uc?export=download&id=1Rql50vcfEGrMJTAq9fSmGgfecOd580dL" className="dataset-item" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/uc?export=download&id=1f_5_M0YCqF8xE4Ufgs-jR960BevSqQs-" className="dataset-item" target="_blank" rel="noopener noreferrer">
                           <span className="dataset-icon">🌡️</span>
                           <span className="dataset-name">오렌지3-온습도 데이터</span>
                           <span className="dataset-type">.csv</span>
